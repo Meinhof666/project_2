@@ -16,7 +16,7 @@ let appData = {
     optionalExpenses: {},
     income: [],
     timeData: time,
-    savings: true
+    savings: true || false
 };
 
 function chooseExpenses() {
@@ -29,7 +29,7 @@ function chooseExpenses() {
     
             appData.expenses[a] = b;
         } else {
-            i = i - 1;
+            i--;
         };
     };
 };
@@ -56,6 +56,7 @@ function checkSavings() {
 
         appData.monthIncome = save / 100 / 12 * percent;
         alert("Доход в месяц с вашего депозите: " + appData.monthIncome);
+        console.log(appData.monthIncome);
     }
 };
 checkSavings();
